@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://dltml7ycr2tbt"]
+
+[ext_resource type="Script" path="res://redot_jam_template/menus/main_menu/main_menu.gd" id="1_wqurw"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_wqurw")
+
+[node name="MainContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainPanel" type="Panel" parent="MainContainer"]
+layout_mode = 2
+
+[node name="MenuContainer" type="PanelContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MenuPanel" type="Panel" parent="MainContainer/MenuContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainContainer/MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/MenuContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="GameNameLabel" type="Label" parent="MainContainer/MenuContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Slappy Pappy"
+
+[node name="PlayButton" type="Button" parent="MainContainer/MenuContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../OptionsButton")
+focus_next = NodePath("../OptionsButton")
+focus_previous = NodePath("../QuitButton")
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="MainContainer/MenuContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../PlayButton")
+focus_neighbor_bottom = NodePath("../CreditsButton")
+focus_next = NodePath("../CreditsButton")
+focus_previous = NodePath("../PlayButton")
+text = "Options"
+
+[node name="CreditsButton" type="Button" parent="MainContainer/MenuContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../OptionsButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+focus_previous = NodePath("../OptionsButton")
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="MainContainer/MenuContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../CreditsButton")
+focus_neighbor_bottom = NodePath("../PlayButton")
+focus_next = NodePath("../PlayButton")
+focus_previous = NodePath("../CreditsButton")
+text = "Quit"
