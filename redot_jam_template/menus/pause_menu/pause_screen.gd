@@ -1,6 +1,9 @@
 extends CanvasLayer
 
-@onready var panelContainer = $%PanelContainer
+@onready var panelContainer = %PanelContainer
+@onready var resumeButton: Button = %ResumeButton
+@onready var optionsButton: Button = %OptionsButton
+@onready var quitButton: Button = %QuitButton
 
 var optionsScreenScene = preload("res://redot_jam_template/menus/options_menu/options_screen.tscn")
 var isClosing: bool
@@ -10,10 +13,10 @@ func _ready() -> void:
 	get_tree().paused = true
 	panelContainer.pivot_offset = panelContainer.size / 2
 	
-	$%ResumeButton.grab_focus()
-	$%ResumeButton.pressed.connect(on_resume_pressed)
-	$%OptionsButton.pressed.connect(on_options_pressed)
-	$%QuitButton.pressed.connect(on_quit_pressed)
+	resumeButton.grab_focus()
+	resumeButton.pressed.connect(on_resume_pressed)
+	optionsButton.pressed.connect(on_options_pressed)
+	quitButton.pressed.connect(on_quit_pressed)
 	
 	
 	var tween = create_tween()
@@ -55,9 +58,9 @@ func on_options_pressed() -> void:
 
 func on_quit_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/ui/menus/title_screen.tscn")
+	get_tree().change_scene_to_file("res://redot_jam_template/menus/main_menu/main_menu.tscn")
 
 
 func on_options_back_pressed(optionsScreen: Node) -> void:
 	optionsScreen.queue_free()
-	$%OptionsButton.grab_focus()
+	optionsButton.grab_focus()

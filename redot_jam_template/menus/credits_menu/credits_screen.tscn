@@ -35,8 +35,11 @@ layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_right = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="GridContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 2
 
 [node name="ArtLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -71,4 +74,6 @@ text = "Programming dude"
 [node name="BackButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
 text = "Back"

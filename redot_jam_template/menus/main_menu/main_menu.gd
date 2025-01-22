@@ -3,9 +3,6 @@ extends CanvasLayer
 @export_category("Main Menu")
 @export var gameName: String
 @export var gameScene: PackedScene
-@export var labelTheme: Theme
-@export var buttonTheme: Theme
-@export var panelTheme: Theme
 
 @onready var mainContainer: MarginContainer = $%MainContainer
 @onready var gameNameLabel: Label = $%GameNameLabel

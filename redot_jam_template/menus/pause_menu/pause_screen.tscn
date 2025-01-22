@@ -13,40 +13,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
-unique_name_in_owner = true
+[node name="Panel" type="Panel" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="MarginContainer/PanelContainer"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="PauseLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="PauseLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Paused"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="ResumeButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="ResumeButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Resume"
 
-[node name="OptionsButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Options"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
