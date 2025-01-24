@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2d0ij6ik4x3e"]
+[gd_scene load_steps=3 format=3 uid="uid://d2d0ij6ik4x3e"]
 
 [ext_resource type="Script" path="res://redot_jam_template/menus/controls_menu/controls_screen.gd" id="1_r7yup"]
+[ext_resource type="Theme" uid="uid://d0bbrqfsasym" path="res://theme.tres" id="2_lycfc"]
 
 [node name="ControlsScreen" type="CanvasLayer"]
 layer = 3
@@ -29,5 +30,5 @@ columns = 2
 [node name="BackButton" type="Button" parent="MainContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-focus_neighbor_top = NodePath("/root/@EditorNode@16957/@Panel@13/@VBoxContainer@14/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@25/DockVSplitCenter/@VSplitContainer@52/@VBoxContainer@53/@PanelContainer@98/MainScreen/@CanvasItemEditor@9281/@VSplitContainer@9103/@HSplitContainer@9105/@HSplitContainer@9107/@Control@9108/@SubViewportContainer@9109/@SubViewport@9110/ControlsScreen/MainContainer/VBoxContainer/RemapContainer/@Button@17450")
+theme = ExtResource("2_lycfc")
 text = "Back"
