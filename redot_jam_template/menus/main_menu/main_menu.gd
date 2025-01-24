@@ -1,31 +1,23 @@
 extends CanvasLayer
 
-@export_category("Main Menu")
-@export var gameName: String
 @export var gameScene: PackedScene
 
 @onready var mainContainer: MarginContainer = $%MainContainer
-@onready var gameNameLabel: Label = $%GameNameLabel
 @onready var playButton: Button = $%PlayButton
 @onready var optionsButton: Button = $%OptionsButton
 @onready var creditsButton: Button = $%CreditsButton
 @onready var quitButton: Button = $%QuitButton
 
-var optionsScene = preload("res://redot_jam_template/menus/options_menu/options_screen.tscn")
-var creditsScene = preload("res://redot_jam_template/menus/credits_menu/credits_screen.tscn")
+var optionsScene = preload("res://redot_jam_template/menus/options_menu/options_menu.tscn")
+var creditsScene = preload("res://redot_jam_template/menus/credits_menu/credits_menu.tscn")
 
 
 func _ready() -> void:
-	_set_game_name_label()
 	playButton.pressed.connect(_on_play_pressed)
 	optionsButton.pressed.connect(_on_options_pressed)
 	creditsButton.pressed.connect(_on_credits_pressed)
 	quitButton.pressed.connect(_on_quit_pressed)
 	playButton.grab_focus()
-
-
-func _set_game_name_label() -> void:
-	gameNameLabel.text = gameName
 
 
 func _on_play_pressed() -> void:

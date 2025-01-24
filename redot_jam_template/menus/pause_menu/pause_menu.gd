@@ -5,7 +5,7 @@ extends CanvasLayer
 @onready var optionsButton: Button = %OptionsButton
 @onready var quitButton: Button = %QuitButton
 
-var optionsScreenScene = preload("res://redot_jam_template/menus/options_menu/options_screen.tscn")
+var optionsScreenScene = preload("res://redot_jam_template/menus/options_menu/options_menu.tscn")
 var isClosing: bool
 
 

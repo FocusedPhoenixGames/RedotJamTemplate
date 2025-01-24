@@ -10,7 +10,7 @@ signal back_pressed
 @onready var sfxSlider: HSlider = $%SfxSlider
 @onready var musicSlider: HSlider = $%MusicSlider
 
-var controlsScene = preload("res://redot_jam_template/menus/controls_menu/controls_screen.tscn")
+var controlsScene = preload("res://redot_jam_template/menus/controls_menu/controls_menu.tscn")
 
 
 func _ready() -> void:

@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://whqv2y330fbm"]
 
-[ext_resource type="Script" path="res://redot_jam_template/menus/options_menu/options_screen.gd" id="1_1pod8"]
+[ext_resource type="Script" path="res://redot_jam_template/menus/options_menu/options_menu.gd" id="1_ibpiv"]
 
-[node name="OptionsScreen" type="CanvasLayer"]
+[node name="OptionsMenu" type="CanvasLayer"]
 layer = 2
-script = ExtResource("1_1pod8")
+script = ExtResource("1_ibpiv")
 
 [node name="OptionsContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true

@@ -1,11 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2d0ij6ik4x3e"]
+[gd_scene load_steps=2 format=3 uid="uid://d2d0ij6ik4x3e"]
 
-[ext_resource type="Script" path="res://redot_jam_template/menus/controls_menu/controls_screen.gd" id="1_r7yup"]
-[ext_resource type="Theme" uid="uid://d0bbrqfsasym" path="res://theme.tres" id="2_lycfc"]
+[ext_resource type="Script" path="res://redot_jam_template/menus/controls_menu/controls_menu.gd" id="1_v2cuq"]
 
-[node name="ControlsScreen" type="CanvasLayer"]
+[node name="ControlsMenu" type="CanvasLayer"]
 layer = 3
-script = ExtResource("1_r7yup")
+script = ExtResource("1_v2cuq")
 
 [node name="MainContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -30,5 +29,4 @@ columns = 2
 [node name="BackButton" type="Button" parent="MainContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("2_lycfc")
 text = "Back"
