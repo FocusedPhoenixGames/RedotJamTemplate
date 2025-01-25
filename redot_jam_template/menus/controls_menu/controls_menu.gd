@@ -1,4 +1,3 @@
-@tool
 extends CanvasLayer
 
 signal back_pressed
@@ -19,38 +18,33 @@ func _ready() -> void:
 
 
 func _create_action_remap() -> void:
-	var previousItem
-	var button1
+	var previousItem = backButton
 	
-	for index in range(inputs.size()):
-		var action = inputs[index]
+	for input in range(inputs.size()):
+		var action = inputs[input]
 		var label = Label.new()
 		label.text = action
 		
-		if labelTheme != null:
-			label.theme = labelTheme
+		label.theme = labelTheme
 		
 		remapContainer.add_child(label)
 		
 		var button = RemapButton.new()
 		button.action = action
 		
-		if buttonTheme != null:
-			button.theme = buttonTheme
-			
+		button.theme = buttonTheme
+		
 		remapContainer.add_child(button)
 		
-		if index != 0:
+		if input != 0:
 			button.focus_neighbor_top = previousItem.get_path()
 			previousItem.focus_neighbor_bottom = button.get_path()
 		
-		if index == inputs.size() - 1:
-			backButton.focus_neighbor_top = button.get_path()
+		if input == inputs.size() - 1:
 			backButton.focus_neighbor_top = button.get_path()
 			button.focus_neighbor_bottom = backButton.get_path()
 		
-		if index == 0:
-			button1 = button
+		if input == 0:
 			button.focus_neighbor_bottom = backButton.get_path()
 			button.grab_focus()
 		

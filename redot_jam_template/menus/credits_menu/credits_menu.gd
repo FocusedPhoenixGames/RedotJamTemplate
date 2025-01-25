@@ -2,7 +2,7 @@ extends CanvasLayer
 
 signal back_pressed
 
-@onready var backButton: Button = $%BackButton
+@onready var backButton: Button = %BackButton
 
 
 func _ready() -> void:

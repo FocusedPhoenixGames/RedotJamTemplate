@@ -2,13 +2,13 @@ extends CanvasLayer
 
 signal back_pressed
 
-@onready var optionsContainer: MarginContainer = $%OptionsContainer
-@onready var windowButton: Button = $%WindowButton
-@onready var backButton: Button = $%BackButton
-@onready var controlsButton: Button = $%ControlsButton
-@onready var masterSlider: HSlider = $%MasterSlider
-@onready var sfxSlider: HSlider = $%SfxSlider
-@onready var musicSlider: HSlider = $%MusicSlider
+@onready var optionsContainer: MarginContainer = %OptionsContainer
+@onready var windowButton: Button = %WindowButton
+@onready var backButton: Button = %BackButton
+@onready var controlsButton: Button = %ControlsButton
+@onready var masterSlider: HSlider = %MasterSlider
+@onready var sfxSlider: HSlider = %SfxSlider
+@onready var musicSlider: HSlider = %MusicSlider
 
 var controlsScene = preload("res://redot_jam_template/menus/controls_menu/controls_menu.tscn")
 
