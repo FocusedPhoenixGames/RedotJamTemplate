@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var panelContainer = %PanelContainer
+@onready var pauseContainer = %PauseContainer
 @onready var resumeButton: Button = %ResumeButton
 @onready var optionsButton: Button = %OptionsButton
 @onready var quitButton: Button = %QuitButton
@@ -11,7 +11,7 @@ var isClosing: bool
 
 func _ready() -> void:
 	get_tree().paused = true
-	panelContainer.pivot_offset = panelContainer.size / 2
+	pauseContainer.pivot_offset = pauseContainer.size / 2
 	
 	resumeButton.grab_focus()
 	resumeButton.pressed.connect(on_resume_pressed)
@@ -20,8 +20,8 @@ func _ready() -> void:
 	
 	
 	var tween = create_tween()
-	tween.tween_property(panelContainer, "scale", Vector2.ZERO, 0)
-	tween.tween_property(panelContainer, "scale", Vector2.ONE, 0.3)\
+	tween.tween_property(pauseContainer, "scale", Vector2.ZERO, 0)
+	tween.tween_property(pauseContainer, "scale", Vector2.ONE, 0.3)\
 	.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
 
 
@@ -36,8 +36,8 @@ func close() -> void:
 		return
 	
 	var tween = create_tween()
-	tween.tween_property(panelContainer, "scale", Vector2.ONE, 0)
-	tween.tween_property(panelContainer, "scale", Vector2.ZERO, 0.3)\
+	tween.tween_property(pauseContainer, "scale", Vector2.ONE, 0)
+	tween.tween_property(pauseContainer, "scale", Vector2.ZERO, 0.3)\
 	.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_BACK)
 	
 	await tween.finished

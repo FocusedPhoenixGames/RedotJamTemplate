@@ -22,18 +22,15 @@ func _create_action_remap() -> void:
 	
 	for input in range(inputs.size()):
 		var action = inputs[input]
+		
 		var label = Label.new()
 		label.text = action
-		
 		label.theme = labelTheme
-		
 		remapContainer.add_child(label)
 		
 		var button = RemapButton.new()
 		button.action = action
-		
 		button.theme = buttonTheme
-		
 		remapContainer.add_child(button)
 		
 		if input != 0:
