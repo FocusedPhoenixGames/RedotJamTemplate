@@ -32,4 +32,10 @@ func _unhandled_input(event) -> void:
 
 
 func update_key_text() -> void:
-	text = "%s" % InputMap.action_get_events(action)[0].as_text()
+	if InputMap.action_get_events(action).size() > 0:
+		text = "%s" % InputMap.action_get_events(action)[0].as_text();
+	else:
+		text = "Not Assigned"
+		
+		var errorText = "There are no input events for %s, add one in Project > Project Settings > Input Map." % action
+		printerr(errorText)
